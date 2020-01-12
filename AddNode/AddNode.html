@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>AddNode</title>
+</head>
+<body>
+<ul id="ulid">
+    <li>1</li>
+    <li>2</li>
+    <li>3</li>
+</ul>
+<br/>
+<input type="button" value="Add A New Node" onclick="add();">
+<script type="text/javascript">
+    function add(){
+        //get ul obj
+        var ul1 = document.getElementById("ulid");
+        //create new li obj
+        var li1 = document.createElement("li");
+        //create the value in li
+        var tex1 = document.createTextNode("New Node");
+        //add text to li
+        li1.appendChild(tex1);
+        //add li to ul
+        ul1.appendChild(li1);
+    }
+</script>
+</body>
+</html>
