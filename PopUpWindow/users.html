@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>users</title>
+</head>
+<body>
+<table>
+    <tr>
+        <td>Choose</td>
+        <td>Number</td>
+        <td>Name</td>
+    </tr>
+    <tr>
+        <td><input type="button" value="choose" onclick="search('01','AA');"></td>
+        <td>01</td>
+        <td>AA</td>
+    </tr>
+    <tr>
+        <td><input type="button" value="choose" onclick="search('02','BB');"></td>
+        <td>02</td>
+        <td>BB</td>
+    </tr>
+    <tr>
+        <td><input type="button" value="choose" onclick="search('01','AA');"></td>
+        <td>03</td>
+        <td>CC</td>
+    </tr>
+</table>
+
+<script type="text/javascript">
+    function search(num,name){
+        //assign the arguments to the input box in index1.html
+        //get the object of index1.html use opener attribute
+        var pwin = window.opener;
+        pwin.document.getElementById("numid").value = num;
+        pwin.document.getElementById("nameid").value = name;
+        window.close();
+    }
+
+</script>
+</body>
+</html>
