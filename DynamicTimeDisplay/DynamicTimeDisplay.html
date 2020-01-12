@@ -2,9 +2,20 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>$Title$</title>
+    <title>DynamicTimeDisplay</title>
 </head>
 <body>
-$END$
+<div id="divid"></div>
+<script type="text/javascript">
+    function getTime(){
+        var date = new Date();
+        var d1 = date.toLocaleString();
+        //get div
+        var div1 = document.getElementById("divid");
+        div1.innerHTML = d1;
+    }
+
+    setInterval("getTime();",1000);
+</script>
 </body>
 </html>
